@@ -1,0 +1,34 @@
+<%= simple_form_for @pin, html:{multipart: true } do |pin| %>
+<% if @pin.errors.any? %>
+        <h2>
+          <%= pluralize(@pin.errors.count, "error") %>
+          prevent from this pin from saving
+          <ul>
+            <%@pin.errors.full_messages.each do |msg|%>
+            <li>
+              msg
+            </li>
+                <% end %>
+          </ul>
+        </h2>
+<% end %>
+
+    <div class="form-group ">
+      <div class="field">
+        <%= pin.label :title %><br>
+        <%= pin.text_field :title %>
+      </div>
+
+      <div class="field">
+        <%= pin.label :description %><br>
+        <%= pin.text_area :description %>
+      </div>
+
+      <div class="actions">
+        <%= pin.submit %>
+      </div>
+
+    </div>
+
+
+<% end %>
