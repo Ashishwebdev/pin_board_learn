@@ -9,8 +9,9 @@
     <td>  <%= pin.title %></td>
     <td><%= pin.description %></td>
     <td><%= link_to "Show", pin %></td>
-    <td><%= link_to "Edit", edit_pin_path(pin) %></td>
-
+    <% if user_signed_in? %>
+    <d><%= link_to "Edit", edit_pin_path(pin) %></d>
+<% end %>
   </tr>
   </table>
     <% end %>

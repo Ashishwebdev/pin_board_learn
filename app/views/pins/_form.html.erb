@@ -6,7 +6,7 @@
           <ul>
             <%@pin.errors.full_messages.each do |msg|%>
             <li>
-              msg
+             <%= msg %>
             </li>
                 <% end %>
           </ul>
@@ -14,6 +14,7 @@
 <% end %>
 
     <div class="form-group ">
+
       <div class="field">
         <%= pin.label :title %><br>
         <%= pin.text_field :title %>

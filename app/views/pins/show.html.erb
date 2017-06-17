@@ -6,9 +6,11 @@
 
 
     <div class = "btn-group">
-      <%= link_to 'Edit', edit_pin_path(@pin),class: "btn btn-default"%>
+      <% if @current_user %>
+          <%= link_to 'Edit', edit_pin_path(@pin),class: "btn btn-default"%>
       <%= link_to 'Destroy', @pin, method: :delete, data:{confirm: 'Are you sure'}, class:"btn btn-default" %>
-    </div>
+    <% end %>
+          </div>
 
 </br>
 <%= link_to "Go Back",  root_path %>
