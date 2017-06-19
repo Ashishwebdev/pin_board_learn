@@ -1,5 +1,8 @@
 <div class="page-header">
-  <h1><%=@pin.title %><br>  </h1>
+
+      <%= image_tag("#{@pin.image}") %>
+
+      <h1><%=@pin.title %><br>  </h1>
     <p>  <%= @pin.description %>  </p>
     <small>Submitted by </small>
   <%= @pin.user.email %>

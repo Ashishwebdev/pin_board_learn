@@ -13,23 +13,24 @@
         </h2>
 <% end %>
 
-    <div class="form-group ">
+    <div class="field">
+      <%= pin.label :image %><br>
+      <%= pin.file_field :image %>
+    </div>
+
  
-      <div class="field">
+      <div class="form-group ">
         <%= pin.label :title %><br>
         <%= pin.text_field :title %>
       </div>
 
-      <div class="field">
+      <div class="form-group ">
         <%= pin.label :description %><br>
         <%= pin.text_area :description %>
       </div>
 
-      <div class="actions">
+      <div class="form-group ">
         <%= pin.submit %>
       </div>
-
-    </div>
-
 
 <% end %>

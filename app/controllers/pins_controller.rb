@@ -13,11 +13,10 @@ end
   end
 
   def create
-    +    @pin = current_user.pins.build(pin_params)
-=begin
+
     @user = current_user
     @pin = @user.pins.new(pin_params)
-=end
+
     if @pin.save
       redirect_to root_path , notice: "successfully created new pin"
     else render 'new'
@@ -51,7 +50,7 @@ end
 
 
  def pin_params
-   params.require(:pin).permit( :title , :description, :user_id)
+   params.require(:pin).permit( :title , :description, :user_id, :image)
  end
 
 
