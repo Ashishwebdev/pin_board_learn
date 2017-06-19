@@ -12,6 +12,7 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'simple_form'
 gem 'devise', '~> 4.3'
 gem 'carrierwave', '~> 1.0'
+gem 'masonry-rails', '~> 0.2.4'
 group :development, :test do
   gem 'byebug'
 end
