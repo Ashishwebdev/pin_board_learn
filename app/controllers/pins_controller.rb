@@ -1,6 +1,6 @@
 class PinsController < ApplicationController
-  before_action :find_pin, only: [:destroy, :show,:edit,:update]
-  before_action :authenticate_user!, except: [  :index, :show]
+  before_action :find_pin, only: [:destroy, :show,:edit,:update, :upvote]
+  before_action :authenticate_user!, except: [  :index, :show, :upvote]
   def index
     @pin = Pin.all
   end
@@ -40,6 +40,11 @@ end
     if @pin.destroy
       redirect_to root_path , notice: " pin is successfully deleted "
     end
+  end
+
+  def upvote
+    @pin.upvote_by current_user
+    redirect_to :back
   end
 
   private

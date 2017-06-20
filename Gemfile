@@ -13,6 +13,7 @@ gem 'simple_form'
 gem 'devise', '~> 4.3'
 gem 'carrierwave', '~> 1.0'
 gem 'masonry-rails', '~> 0.2.4'
+gem 'acts_as_votable', '~> 0.10.0'
 group :development, :test do
   gem 'byebug'
 end
